@@ -23,12 +23,12 @@ export default function Home() {
           <Row>
             <Col>
               <div className="buttons"> 
-                <Buttons label='Calculator' to='/Calculator'/>
+                <Buttons label='Calculator' to='/Calculator' cssscript={"calJson-btn"}/>
               </div>
             </Col>
             <Col>
               <div className="buttons">
-                <Buttons label='JSON' to='/JSON'/>
+                <Buttons label='JSON' to='/JSON' cssscript={"calJson-btn"}/>
               </div>
             </Col>
           </Row>

@@ -90,12 +90,12 @@
   z-index: -1; /* Place the overlay behind other content */
 }
 
-.card {
+#cardHobbies {
   margin-bottom: 20px;
   transition: transform 0.3s ease-in-out;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 }
 
@@ -125,4 +125,32 @@
 /* Optional: Add some padding or margin to the button */
 .hobbyBtn .mb-2 {
   margin-bottom: -30px !important;
+}
+
+/* Calculator Design */
+.calculator-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator-main {
+  max-width: 500px;
+}
+
+.resultbox {
+  width: 400px;
+  text-align: right;
+  font-size: 20px;
+}
+
+.calcbtn {
+  width: 100%;
+}
+
+.btns {
+  width: 24%;
+  height: 75px;
+  margin: 2px;
 }

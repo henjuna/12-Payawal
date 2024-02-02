@@ -6,9 +6,10 @@ import { useNavigate } from 'react-router-dom';
 interface ButtonProps {
     label: string;
     to: string;
+    cssscript: string;
 }
 
-export const Buttons: FC<ButtonProps> = ({label, to}) => {
+export const Buttons: FC<ButtonProps> = ({label, to, cssscript}) => {
     const navigate = useNavigate();
     const goTo = () => {
         navigate(to);
@@ -16,7 +17,7 @@ export const Buttons: FC<ButtonProps> = ({label, to}) => {
     
   return (
     <>
-    <Button variant="primary" size="lg" className="calJson-btn" onClick={goTo}>{label}</Button>
+    <Button variant="primary" size="lg" className={cssscript} onClick={goTo}>{label}</Button>
     </>
   )
 }
