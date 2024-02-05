@@ -42,7 +42,7 @@
 
 .firstSection {
   justify-content: center;
-  margin-bottom: 1px; /* Add some margin for better spacing */
+  margin-bottom: 5px; /* Add some margin for better spacing */
 }
 
 .secondSection {
@@ -50,9 +50,14 @@
   text-align: left; /* Align the text to the left */
 }
 
+.mb-3{
+  margin-top: 15px;
+}
+
 .buttons {
   display: flex;
   justify-content: center;
+  margin-top: -20px;
 }
 
 .calJson-btn {
@@ -62,74 +67,22 @@
 }
 
 .footer {
-  max-width: 45%;
-  width: 850px;
+  max-width: 700px;
+  width: 650px;
   box-sizing: border-box; /* Ensure consistent box sizing */
   margin: 0 auto; /* Center the footer horizontally */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adjust the values as needed */
 }
 
-/* Hobbies */
-.hobbiesPage {
-  position: relative;
-  min-height: 100vh; /* Ensure the background covers the entire viewport height */
+.home-Btn {
   display: flex;
-  flex-direction: column; /* Make the container a column flex container */
-}
-
-.hobbiesPage::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url('Background.jpg'); /* Set the path to your image */
-  background-size: cover; /* Cover the entire container */
-  background-position: center; /* Center the image */
-  opacity: 0.5; /* Adjust the opacity for the background image */
-  z-index: -1; /* Place the overlay behind other content */
-}
-
-#cardHobbies {
-  margin-bottom: 20px;
-  transition: transform 0.3s ease-in-out;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-
-.component-hobbycard {
-  margin-bottom: 10px !important; /* Optional: Add margin between cards */
-}
-
-.hobby-card {
-  height: 400px !important; /* Set a fixed height for the entire card */
-  overflow: hidden; /* Hide overflowing content */
-}
-
-.hobby-card-image {
-  height: 50% !important; /* Set a fixed height for the image within the card */
-  object-fit: cover; /* Ensure the image covers the entire space without stretching */
-}
-
-.hobbyBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000; /* Adjust the z-index as needed to ensure the button is above other content */
-}
-
-/* Remove the !important from previous styles */
-
-/* Optional: Add some padding or margin to the button */
-.hobbyBtn .mb-2 {
-  margin-bottom: -30px !important;
+  justify-content: right;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
 }
 
 /* Calculator Design */
 .calculator-page {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -153,4 +106,98 @@
   width: 24%;
   height: 75px;
   margin: 2px;
+}
+
+/* JSON Page */
+.json-whole::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('https://i0.wp.com/backgroundabstract.com/wp-content/uploads/edd/2022/02/5594016-e1656071131636.jpg?resize=150150&ssl=1'); /* Set the path to your image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  opacity: 0.5; /* Adjust the opacity for the background image */
+  z-index: -1; /* Place the overlay behind other content */
+}
+
+.json-mainPage {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.json-header {
+  font-size: 150%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+th {
+  background-color: #f2f2f2 !important; /* Set a background color for the header cells */
+  border-bottom: 2px solid #ddd !important; /* Add a bottom border for separation */
+}
+
+.table-design {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
+  outline: 2px solid #0e0e0e;
+}
+
+.JSONText {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.6); /* Adjust values as needed */
+}
+
+.widerColumn {
+  width: 70px;
+  text-align: center;
+}
+
+.center-align {
+  text-align: center;
+}
+
+/* Hobbies Page */
+.hobby-Heading {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #454545;
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.hobby-headerText{
+  padding-left: 20px;
+  padding-top: 12px;
+  font-size: 1.5em;
+  font-weight: 1000;
+  font-family: monospace;
+  color: white;
+  display: flex;
+}
+
+.hobby-headerBtn {
+  display: flex;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.hobby-body {
+
+}
+
+.carousel-image {
+  border-radius: 10px;
+  object-fit: cover; /* This will maintain the aspect ratio without stretching */
+  height: 500px;
+  width: 400px;
 }

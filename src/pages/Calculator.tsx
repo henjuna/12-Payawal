@@ -28,7 +28,11 @@ export default function Calculator() {
       setTimesCounter(0);
     }
 
-    if ((displayValue == "0" && (num.includes(data)) || (isResult && num.includes(data))) && data != '0') {
+    if (
+      ((displayValue == "0" && num.includes(data)) ||
+        (isResult && num.includes(data))) &&
+      data != "0"
+    ) {
       setDisplayValue(data);
       setNumIsTrue(true);
       setIsResult(false);
@@ -39,7 +43,10 @@ export default function Calculator() {
         setOpeIsTrue(false);
         setIsResult(false);
         setTimesCounter(0);
-      } else if (data == '0' && ope.includes(displayValue.charAt(displayValue.length - 1))) {
+      } else if (
+        data == "0" &&
+        ope.includes(displayValue.charAt(displayValue.length - 1))
+      ) {
         setDisplayValue(displayValue);
       } else if (numIsTrue) {
         if (ope.includes(data) && !opeIsTrue) {
@@ -64,7 +71,7 @@ export default function Calculator() {
           setOpeIsTrue(false);
           setTimesCounter(0);
         }
-        if (isResult){
+        if (isResult) {
           setIsResult(false);
         }
       }
@@ -171,10 +178,10 @@ export default function Calculator() {
             </div>
           </Stack>
         </div>
-        <div className="mb-2">
+      </div>
+      <div className="home-Btn">
           <Buttons label="Back to Home" to="/" cssscript={"hobbyBtn"} />
         </div>
-      </div>
     </Container>
   );
 }
