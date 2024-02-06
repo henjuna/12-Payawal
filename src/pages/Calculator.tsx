@@ -80,6 +80,9 @@ export default function Calculator() {
 
   return (
     <Container fluid>
+      <div className="calculator-header">
+        <h1>CALCULATOR</h1>
+      </div>
       <div className="calculator-page">
         <div className="calculator-main">
           <Stack gap={3}>
@@ -180,8 +183,8 @@ export default function Calculator() {
         </div>
       </div>
       <div className="home-Btn">
-          <Buttons label="Back to Home" to="/" cssscript={"hobbyBtn"} />
-        </div>
+        <Buttons label="Back to Home" to="/" cssscript={"hobbyBtn"} />
+      </div>
     </Container>
   );
 }

@@ -81,11 +81,22 @@
 }
 
 /* Calculator Design */
+.calculator-header {
+  text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding-top: 30px;
+}
+
 .calculator-page {
-  height: 90vh;
+  height: 79vh;
   display: flex;
+  margin-left: 500px;
+  margin-right: 500px;
   justify-content: center;
   align-items: center;
+  border-radius: 20px;
+  outline: 1px solid black;
+  box-shadow: 0 5px 1px rgba(0, 0, 0, 0.2);
 }
 
 .calculator-main {
@@ -162,15 +173,25 @@ th {
 }
 
 /* Hobbies Page */
+.hobbiesPage {
+  padding-bottom: 50px;
+}
 .hobby-Heading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
   display: flex;
   justify-content: space-between;
   background-color: #454545;
-  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  z-index: 1000; /* Set a higher z-index to ensure it appears above other content */
 }
 
 .hobby-headerText{
@@ -183,6 +204,10 @@ th {
   display: flex;
 }
 
+.img-fluid {
+  width: 400px;
+}
+
 .hobby-headerBtn {
   display: flex;
   padding-right: 20px;
@@ -192,7 +217,8 @@ th {
 }
 
 .hobby-body {
-
+  padding-left: 7%;
+  padding-right: 7%;
 }
 
 .carousel-image {
@@ -200,4 +226,50 @@ th {
   object-fit: cover; /* This will maintain the aspect ratio without stretching */
   height: 500px;
   width: 400px;
+  margin-top: 75px;
+  margin-bottom: 20px;
+}
+
+.car-text {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin: -3px;
+}
+
+.img-size {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-col {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hobby-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  height: 100%;
+}
+
+.singleHobby {
+  padding-top: 2%;
+}
+
+.hobby-header{
+  display: flex;
+  padding-bottom: 10px;
+}
+
+#odd {
+  justify-content: right;
+}
+
+#even {
+  justify-content: left;
 }
