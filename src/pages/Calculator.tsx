@@ -15,21 +15,25 @@ export default function Calculator() {
     const ope = ["+", "-", "*", "/"];
 
     if (data === "=") {
-      const lastChar = displayValue.charAt(displayValue.length - 1);
-      if (ope.includes(lastChar)) {
-        const newValue = displayValue.slice(0, displayValue.length - 1);
-        setDisplayValue(eval(newValue));
-      } else {
-        setDisplayValue(eval(displayValue));
+      try { 
+        const lastChar = displayValue.charAt(displayValue.length - 1);
+        if (ope.includes(lastChar)) {
+          const newValue = displayValue.slice(0, displayValue.length - 1);
+          setDisplayValue(eval(newValue));
+        } else {
+          setDisplayValue(eval(displayValue));
+        }
+        setIsResult(true);
+        setNumIsTrue(true);
+        setOpeIsTrue(false);
+        setTimesCounter(0);
+      } catch (error) {
+        setDisplayValue('Error');
       }
-      setIsResult(true);
-      setNumIsTrue(true);
-      setOpeIsTrue(false);
-      setTimesCounter(0);
     }
 
     if (
-      ((displayValue == "0" && num.includes(data)) ||
+      (((displayValue == "0" || displayValue == "Error") && num.includes(data)) ||
         (isResult && num.includes(data))) &&
       data != "0"
     ) {
