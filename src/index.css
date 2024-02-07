@@ -1,11 +1,4 @@
 /* HOME LAYOUT */
-.home-layout {
-  position: relative;
-  min-height: 100vh; /* Ensure the background covers the entire viewport height */
-  display: flex;
-  flex-direction: column; /* Make the container a column flex container */
-}
-
 .home-layout::before {
   content: "";
   position: absolute;
@@ -13,10 +6,10 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url('Background.jpg'); /* Set the path to your image */
+  background-image: url('https://i0.wp.com/backgroundabstract.com/wp-content/uploads/edd/2022/02/5594016-e1656071131636.jpg?resize=150150&ssl=1'); /* Set the path to your image */
   background-size: cover; /* Cover the entire container */
   background-position: center; /* Center the image */
-  opacity: 0.5; /* Adjust the opacity for the background image */
+  opacity: 0.1; /* Adjust the opacity for the background image */
   z-index: -1; /* Place the overlay behind other content */
 }
 
@@ -85,22 +78,22 @@
   text-align: center;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   padding-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .calculator-page {
   height: 79vh;
+  max-width: 500px;
+  min-width: 500px;
   display: flex;
-  margin-left: 500px;
-  margin-right: 500px;
-  justify-content: center;
+  width: auto;
+  margin: 0 auto 0 auto;
+  justify-content: center !important;
   align-items: center;
   border-radius: 20px;
   outline: 1px solid black;
   box-shadow: 0 5px 1px rgba(0, 0, 0, 0.2);
-}
-
-.calculator-main {
-  max-width: 500px;
 }
 
 .resultbox {
@@ -130,14 +123,14 @@
   background-image: url('https://i0.wp.com/backgroundabstract.com/wp-content/uploads/edd/2022/02/5594016-e1656071131636.jpg?resize=150150&ssl=1'); /* Set the path to your image */
   background-size: cover; /* Cover the entire container */
   background-position: center; /* Center the image */
-  opacity: 0.5; /* Adjust the opacity for the background image */
+  opacity: 0.1; /* Adjust the opacity for the background image */
   z-index: -1; /* Place the overlay behind other content */
 }
 
 .json-mainPage {
   margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
   margin-bottom: 20px;
 }
 
@@ -148,13 +141,14 @@
 }
 
 th {
-  background-color: #f2f2f2 !important; /* Set a background color for the header cells */
-  border-bottom: 2px solid #ddd !important; /* Add a bottom border for separation */
+  background-color: transparent !important; /* Set a background color for the header cells */
+  border-top: 2px solid #3e3e3e !important;
+  border-bottom: 2px solid #3e3e3e !important; /* Add a bottom border for separation */
+  color: rgb(31, 31, 31) !important;
 }
 
-.table-design {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
-  outline: 2px solid #0e0e0e;
+#row-design {
+  background-color: transparent !important;
 }
 
 .JSONText {

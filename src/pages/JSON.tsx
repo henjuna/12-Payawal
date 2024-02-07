@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Table } from "react-bootstrap";
+import { Col, Container, Row, Table } from "react-bootstrap";
 import { Buttons } from "../component/Buttons";
 import { JSONTable } from "../component/JSONTable";
 
@@ -36,11 +36,11 @@ export default function JSON() {
           <p>All Users</p>
         </div>
         <div>
-          <Table responsive="sm" className="table-design">
+          <Table responsive="sm">
             <thead>
               <tr>
-                <th className="widerColumn" >ID</th>
-                <th className="center-align">Full Name</th>
+                <th className="widerColumn">ID</th>
+                <th>Full Name</th>
                 <th>Username</th>
                 <th>Street</th>
                 <th>Suite</th>
@@ -50,7 +50,7 @@ export default function JSON() {
             </thead>
             <tbody>
               {users.map((user) => (
-                <JSONTable user={user}/>
+                <JSONTable user={user} />
               ))}
             </tbody>
           </Table>
@@ -59,7 +59,6 @@ export default function JSON() {
           <Buttons label="Back to Home" to="/" cssscript={"hobbyBtn"} />
         </div>
       </div>
-
     </Container>
   );
 }

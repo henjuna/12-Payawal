@@ -19,13 +19,13 @@ interface JSONTableProps {
 export const JSONTable: FC<JSONTableProps> = ({user}) => {
   return (
     <tr>
-      <td className="widerColumn">{user.id}</td>
-      <td>{user.name}</td>
-      <td>{user.username}</td>
-      <td>{user.address.street}</td>
-      <td>{user.address.suite}</td>
-      <td>{user.address.city}</td>
-      <td>{user.address.zipcode}</td>
+      <td className="widerColumn" id='row-design'>{user.id}</td>
+      <td id='row-design'>{user.name}</td>
+      <td id='row-design'>{user.username}</td>
+      <td id='row-design'>{user.address.street}</td>
+      <td id='row-design'>{user.address.suite}</td>
+      <td id='row-design'>{user.address.city}</td>
+      <td id='row-design'>{user.address.zipcode}</td>
     </tr>
   );
 };
