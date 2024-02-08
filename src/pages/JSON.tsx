@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Col, Container, Row, Table } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import { Container, Table } from "react-bootstrap";
 import { Buttons } from "../component/Buttons";
 import { JSONTable } from "../component/JSONTable";
 

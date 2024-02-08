@@ -123,7 +123,7 @@
   background-image: url('https://i0.wp.com/backgroundabstract.com/wp-content/uploads/edd/2022/02/5594016-e1656071131636.jpg?resize=150150&ssl=1'); /* Set the path to your image */
   background-size: cover; /* Cover the entire container */
   background-position: center; /* Center the image */
-  opacity: 0.1; /* Adjust the opacity for the background image */
+  opacity: 0.3; /* Adjust the opacity for the background image */
   z-index: -1; /* Place the overlay behind other content */
 }
 
@@ -164,6 +164,10 @@ th {
 
 .center-align {
   text-align: center;
+}
+
+tbody tr:hover { /* Change color when hovered */
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Hobbies Page */

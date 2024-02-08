@@ -1,5 +1,4 @@
-import React from "react";
-import { Button, Card, Container, Stack } from "react-bootstrap";
+import { Card, Container, Stack } from "react-bootstrap";
 import { Buttons } from "../component/Buttons";
 import { useState } from "react";
 import { CalculatorBtn } from "../component/CalculatorBtn";
@@ -14,8 +13,8 @@ export default function Calculator() {
     const num = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
     const ope = ["+", "-", "*", "/"];
 
-    if (data === "=") {
-      try { 
+    if (data === "=") { // output showing
+      try { // error handling
         const lastChar = displayValue.charAt(displayValue.length - 1);
         if (ope.includes(lastChar)) {
           const newValue = displayValue.slice(0, displayValue.length - 1);
@@ -23,7 +22,7 @@ export default function Calculator() {
         } else {
           setDisplayValue(eval(displayValue));
         }
-        setIsResult(true);
+        setIsResult(true); // setting of booleans to starting state
         setNumIsTrue(true);
         setOpeIsTrue(false);
         setTimesCounter(0);
@@ -32,7 +31,7 @@ export default function Calculator() {
       }
     }
 
-    if (
+    if ( // Starting another input
       (((displayValue == "0" || displayValue == "Error") && num.includes(data)) ||
         (isResult && num.includes(data))) &&
       data != "0"
@@ -41,20 +40,20 @@ export default function Calculator() {
       setNumIsTrue(true);
       setIsResult(false);
     } else {
-      if (data == "C") {
+      if (data == "C") { // Clearing Input
         setDisplayValue("0");
         setNumIsTrue(false);
         setOpeIsTrue(false);
         setIsResult(false);
         setTimesCounter(0);
-      } else if (
+      } else if ( // Restricting Leading Zero
         data == "0" &&
         ope.includes(displayValue.charAt(displayValue.length - 1))
       ) {
         setDisplayValue(displayValue);
-      } else if (numIsTrue) {
+      } else if (numIsTrue) { // Checking if a number is inputted before placing an operator
         if (ope.includes(data) && !opeIsTrue) {
-          if (data != "*") {
+          if (data != "*") { // not a star
             if (timesCounter != 1) {
               setDisplayValue(displayValue + data);
               setOpeIsTrue(true);
@@ -62,20 +61,20 @@ export default function Calculator() {
             } else {
               setDisplayValue(displayValue);
             }
-          } else if (timesCounter === 0) {
+          } else if (timesCounter === 0) { // if star, count star
             setDisplayValue(displayValue + data);
             setTimesCounter(1);
-          } else if (timesCounter === 1) {
+          } else if (timesCounter === 1) { // max star input is 2 for power function
             setDisplayValue(displayValue + data);
             setTimesCounter(2);
             setOpeIsTrue(true);
           }
-        } else if (num.includes(data)) {
+        } else if (num.includes(data)) { // if input is number
           setDisplayValue(displayValue + data);
           setOpeIsTrue(false);
           setTimesCounter(0);
         }
-        if (isResult) {
+        if (isResult) { // setting result to false when a operator is placed
           setIsResult(false);
         }
       }
